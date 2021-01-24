@@ -25,7 +25,7 @@ int main() {
     }
 
     string user_input;
-    cout << "Please enter the word you would like to print. ";
+    cout << "Please enter what you would like to convert to ASCII-ART: ";
     getline (cin,user_input);
     cout << "You have entered " << user_input << ".\n\n";
     string output_array[7] = {"", "", "", "", "", "", ""};
@@ -42,7 +42,7 @@ int main() {
         {
             istringstream string_stream_variable (line_in_file);
             string line_as_string = string_stream_variable.str();
-            if (c == line_as_string.at(0)) {
+            if (tolower(c) == tolower(line_as_string.at(0))) {
                 for (int one_or_zero_line = 0; one_or_zero_line <= 6; one_or_zero_line++) {
                     getline(this_chars_file, line_in_file);
                     istringstream ssv (line_in_file);
