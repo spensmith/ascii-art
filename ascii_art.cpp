@@ -27,7 +27,7 @@ int main() {
     string user_input;
     cout << "Please enter what you would like to convert to ASCII-ART: ";
     getline (cin,user_input);
-    cout << "You have entered " << user_input << ".\n\n";
+    cout << "You have entered: " << user_input << "\n\n";
     string output_array[7] = {"", "", "", "", "", "", ""};
     for (char &c: user_input) {
         ifstream this_chars_file;
